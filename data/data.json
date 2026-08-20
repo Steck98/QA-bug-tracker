@@ -1,0 +1,22 @@
+{
+    "users":[
+        {
+    "name": "name",
+    "last_name":"last_name",
+    "id": 0 ,
+    "employed": true,
+    "position": "position"
+
+
+    }],
+    "bugs":[
+        {
+        "title": "title",
+        "id" : "id",
+        "status": "status",
+        "priority":"priority",
+        "description":"description",
+        "assigned_to":"assigned_user",
+        "reported_by": "reported_user"
+    }]
+}
