@@ -71,7 +71,3 @@ class Bug:
             f"Assigned to: {self.__assigned_to}\n"
             f"Reported by: {self.__reported_by}"
         )
-
-
-first_bug = Bug(title="shakaka")
-print(first_bug)
