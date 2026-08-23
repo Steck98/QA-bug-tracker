@@ -5,7 +5,7 @@ class User:
         self,
         name="name",
         last_name="last_name",
-        employee_id=0,
+        employee_id="0",
         employed=True,
         position="Worker",
     ):
