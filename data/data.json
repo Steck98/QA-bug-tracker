@@ -1,22 +1,118 @@
 {
-    "users":[
+    "users": [
         {
-    "name": "name",
-    "last_name":"last_name",
-    "id": 0 ,
-    "employed": true,
-    "position": "position"
-
-
-    }],
-    "bugs":[
+            "name": "name",
+            "last_name": "last_name",
+            "id": 0,
+            "employed": true,
+            "position": "position"
+        },
         {
-        "title": "title",
-        "id" : "id",
-        "status": "status",
-        "priority":"priority",
-        "description":"description",
-        "assigned_to":"assigned_user",
-        "reported_by": "reported_user"
-    }]
+            "name": "Rafał",
+            "last_name": "Stecz",
+            "id": 1,
+            "employed": true,
+            "position": "QA Automation"
+        },
+        {
+            "name": "Anna",
+            "last_name": "Kowalska",
+            "id": 2,
+            "employed": true,
+            "position": "Developer"
+        },
+        {
+            "name": "Rafał",
+            "last_name": "Stecz",
+            "id": 1,
+            "employed": true,
+            "position": "QA Automation"
+        },
+        {
+            "name": "Anna",
+            "last_name": "Kowalska",
+            "id": 2,
+            "employed": true,
+            "position": "Developer"
+        },
+        {
+            "name": "Rafał",
+            "last_name": "Stecz",
+            "id": 1,
+            "employed": true,
+            "position": "QA Automation"
+        },
+        {
+            "name": "Anna",
+            "last_name": "Kowalska",
+            "id": 2,
+            "employed": true,
+            "position": "Developer"
+        }
+    ],
+    "bugs": [
+        {
+            "title": "title",
+            "id": "id",
+            "status": "status",
+            "priority": "priority",
+            "description": "description",
+            "assigned_to": "assigned_user",
+            "reported_by": "reported_user"
+        },
+        {
+            "title": "Login button doesn't work",
+            "id": "BUG-001",
+            "status": "open",
+            "priority": "high",
+            "description": "Login button does nothing after clicking",
+            "assigned_to": "Anna",
+            "reported_by": "Rafał"
+        },
+        {
+            "title": "Incorrect user data",
+            "id": "BUG-002",
+            "status": "in progress",
+            "priority": "medium",
+            "description": "User information is displayed incorrectly",
+            "assigned_to": "Rafał",
+            "reported_by": "Anna"
+        },
+        {
+            "title": "Login button doesn't work",
+            "id": "BUG-001",
+            "status": "open",
+            "priority": "high",
+            "description": "Login button does nothing after clicking",
+            "assigned_to": "Anna",
+            "reported_by": "Rafał"
+        },
+        {
+            "title": "Incorrect user data",
+            "id": "BUG-002",
+            "status": "in progress",
+            "priority": "medium",
+            "description": "User information is displayed incorrectly",
+            "assigned_to": "Rafał",
+            "reported_by": "Anna"
+        },
+        {
+            "title": "Login button doesn't work",
+            "id": "BUG-001",
+            "status": "open",
+            "priority": "high",
+            "description": "Login button does nothing after clicking",
+            "assigned_to": "Anna",
+            "reported_by": "Rafał"
+        },
+        {
+            "title": "Incorrect user data",
+            "id": "BUG-002",
+            "status": "in progress",
+            "priority": "medium",
+            "description": "User information is displayed incorrectly",
+            "assigned_to": "Rafał",
+            "reported_by": "Anna"
+        }
+    ]
 }
