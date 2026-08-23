@@ -2,7 +2,7 @@ class Bug:
     def __init__(
         self,
         title="title",
-        bug_id=0,
+        bug_id="0",
         status="status",
         priority="priority",
         description="description",
