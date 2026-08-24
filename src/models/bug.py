@@ -1,4 +1,7 @@
 class Bug:
+    allowed_status = ["TODO", "INPROGRESS", "DONE"]  # noqa: RUF012
+    allowed_priorities = ["HIGH", "MEDIUM", "LOW"]  # noqa: RUF012
+
     def __init__(
         self,
         title="title",
