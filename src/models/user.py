@@ -16,6 +16,10 @@ class User:
         self.__position = position
 
     @property
+    def employee_id(self):
+        return self.__id
+
+    @property
     def position(self):
         return self.__position
 
@@ -44,6 +48,15 @@ class User:
     @last_name.setter
     def last_name(self, new_last_name):
         self.__last_name = new_last_name
+
+    def to_dict(self):
+        return {
+            "name": self.__name,
+            "last_name": self.__last_name,
+            "employee_id": self.__id,
+            "employed": self.__employed,
+            "position": self.__position,
+        }
 
     def __repr__(self):
         return f"Name: {self.__name}\nLast name: {self.__last_name}\nid: {self.__id}\nemployed: {self.__employed}\nposition: {self.__position}"
