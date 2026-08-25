@@ -9,12 +9,14 @@ def run_bug_tracker():
     print("\n===============================")
     print("Welcome in  our Bug tracker App")
     print("===============================\n")
-    if get_menu_choice() == 1:
-        new_user = get_user()
-        print(new_user)
-    else:
-        new_bug = bugs_inputs()
-        print(new_bug)
+    while True:
+        menu_choice = get_menu_choice()
+        if menu_choice == 1:
+            get_user()
+        elif menu_choice == 2:
+            bugs_inputs()
+        else:
+            break
 
 
 def get_user():
@@ -52,12 +54,13 @@ def bugs_inputs():
 def get_menu_choice():
     while True:
         try:
-            user_choice = int(input("Would you like to:\n1.Add new user\n2.Report Bug"))
-            print(user_choice)
-            if 1 <= user_choice <= 2:
+            user_choice = int(
+                input("Would you like to:\n1.Add new user\n2.Report Bug\n3.Exit")
+            )
+            if 1 <= user_choice <= 3:
                 return user_choice
             else:
-                print("You must pick between 1 and 2")
+                print("You must pick between 1 and 3")
         except ValueError:
             print("Your choice must consist of only digists")
 
@@ -92,6 +95,3 @@ def get_choice(category, available_choices):
         validated_choice = validators.validate_choice(choice, available_choices)
         if validated_choice:
             return choice
-
-
-run_bug_tracker()

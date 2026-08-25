@@ -13,6 +13,27 @@
             "employee_id": "USR-1234",
             "employed": true,
             "position": "QA"
+        },
+        {
+            "name": "Rafa",
+            "last_name": "Dsaa",
+            "employee_id": "USR-1222",
+            "employed": false,
+            "position": "QA"
+        },
+        {
+            "name": "Raf",
+            "last_name": "Dsa",
+            "employee_id": "USR-3123",
+            "employed": false,
+            "position": "QA"
+        },
+        {
+            "name": "Raf",
+            "last_name": "Das",
+            "employee_id": "USR-1942",
+            "employed": false,
+            "position": "QA"
         }
     ],
     "bugs": [
