@@ -1,6 +1,7 @@
 import validators
 from models.bug import Bug
 from models.user import User
+from services.bug_manager import add_bug
 
 
 def run_bug_tracker():
@@ -32,14 +33,16 @@ def bugs_inputs():
     print("\n===============================")
     print("Submit bug report")
     print("===============================\n")
-    return Bug(
-        title=get_text("Pick a title: "),
-        bug_id=get_id("Bug ID: ", "BG-"),
-        status=get_choice("What is the bug status? ", Bug.allowed_status),
-        priority=get_choice("What is the bug priority? ", Bug.allowed_priorities),
-        description=input("What is the issue? "),
-        assigned_to=get_text("Who would you like to assign this bug to? "),
-        reported_by=get_text("What is your name? "),
+    return add_bug(
+        Bug(
+            title=input("Pick a title: "),
+            bug_id=get_id("Bug ID: ", "BG-"),
+            status=get_choice("What is the bug status? ", Bug.allowed_status),
+            priority=get_choice("What is the bug priority? ", Bug.allowed_priorities),
+            description=input("What is the issue? "),
+            assigned_to=get_text("Who would you like to assign this bug to? "),
+            reported_by=get_text("What is your name? "),
+        )
     )
 
 
