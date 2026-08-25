@@ -2,6 +2,7 @@ import validators
 from models.bug import Bug
 from models.user import User
 from services.bug_manager import add_bug
+from services.employee_manager import add_employee
 
 
 def run_bug_tracker():
@@ -20,12 +21,14 @@ def get_user():
     print("\n===============================")
     print("Add new user")
     print("===============================\n")
-    return User(
-        name=get_text("Name: "),
-        last_name=get_text("Last name: "),
-        employee_id=get_id("Employee ID: ", "USR-"),
-        employed=get_status(),
-        position=get_choice("Position: ", User.allowed_positions),
+    return add_employee(
+        User(
+            name=get_text("Name: "),
+            last_name=get_text("Last name: "),
+            employee_id=get_id("Employee ID: ", "USR-"),
+            employed=get_status(),
+            position=get_choice("Position: ", User.allowed_positions),
+        )
     )
 
 

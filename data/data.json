@@ -3,9 +3,16 @@
         {
             "name": "Anna",
             "last_name": "Kowalska",
-            "id": 2,
+            "employee_id": "sad",
             "employed": true,
             "position": "Developer"
+        },
+        {
+            "name": "Raf",
+            "last_name": "Raf",
+            "employee_id": "USR-1234",
+            "employed": true,
+            "position": "QA"
         }
     ],
     "bugs": [
