@@ -1,48 +1,6 @@
 {
     "users": [
         {
-            "name": "name",
-            "last_name": "last_name",
-            "id": 0,
-            "employed": true,
-            "position": "position"
-        },
-        {
-            "name": "Rafał",
-            "last_name": "Stecz",
-            "id": 1,
-            "employed": true,
-            "position": "QA Automation"
-        },
-        {
-            "name": "Anna",
-            "last_name": "Kowalska",
-            "id": 2,
-            "employed": true,
-            "position": "Developer"
-        },
-        {
-            "name": "Rafał",
-            "last_name": "Stecz",
-            "id": 1,
-            "employed": true,
-            "position": "QA Automation"
-        },
-        {
-            "name": "Anna",
-            "last_name": "Kowalska",
-            "id": 2,
-            "employed": true,
-            "position": "Developer"
-        },
-        {
-            "name": "Rafał",
-            "last_name": "Stecz",
-            "id": 1,
-            "employed": true,
-            "position": "QA Automation"
-        },
-        {
             "name": "Anna",
             "last_name": "Kowalska",
             "id": 2,
@@ -53,7 +11,7 @@
     "bugs": [
         {
             "title": "title",
-            "id": "id",
+            "bug_id": "id",
             "status": "status",
             "priority": "priority",
             "description": "description",
@@ -62,7 +20,7 @@
         },
         {
             "title": "Login button doesn't work",
-            "id": "BUG-001",
+            "bug_id": "BUG-001",
             "status": "open",
             "priority": "high",
             "description": "Login button does nothing after clicking",
@@ -71,7 +29,7 @@
         },
         {
             "title": "Incorrect user data",
-            "id": "BUG-002",
+            "bug_id": "BUG-002",
             "status": "in progress",
             "priority": "medium",
             "description": "User information is displayed incorrectly",
@@ -79,40 +37,40 @@
             "reported_by": "Anna"
         },
         {
-            "title": "Login button doesn't work",
-            "id": "BUG-001",
-            "status": "open",
-            "priority": "high",
-            "description": "Login button does nothing after clicking",
-            "assigned_to": "Anna",
-            "reported_by": "Rafał"
+            "title": "Title",
+            "bug_id": "BG-1234",
+            "status": "DONE",
+            "priority": "HIGH",
+            "description": "asdasda",
+            "assigned_to": "Raf",
+            "reported_by": "Rafaa"
         },
         {
-            "title": "Incorrect user data",
-            "id": "BUG-002",
-            "status": "in progress",
-            "priority": "medium",
-            "description": "User information is displayed incorrectly",
-            "assigned_to": "Rafał",
-            "reported_by": "Anna"
+            "title": "Ttt",
+            "bug_id": "BG-1234",
+            "status": "TODO",
+            "priority": "HIGH",
+            "description": "ad",
+            "assigned_to": "Da",
+            "reported_by": "Da"
         },
         {
-            "title": "Login button doesn't work",
-            "id": "BUG-001",
-            "status": "open",
-            "priority": "high",
-            "description": "Login button does nothing after clicking",
-            "assigned_to": "Anna",
-            "reported_by": "Rafał"
+            "title": "Ttt",
+            "bug_id": "BG-1234",
+            "status": "TODO",
+            "priority": "HIGH",
+            "description": "ad",
+            "assigned_to": "Da",
+            "reported_by": "Da"
         },
         {
-            "title": "Incorrect user data",
-            "id": "BUG-002",
-            "status": "in progress",
-            "priority": "medium",
-            "description": "User information is displayed incorrectly",
-            "assigned_to": "Rafał",
-            "reported_by": "Anna"
+            "title": "Ttt",
+            "bug_id": "BG-1234",
+            "status": "TODO",
+            "priority": "HIGH",
+            "description": "ad",
+            "assigned_to": "Da",
+            "reported_by": "Da"
         }
     ]
 }

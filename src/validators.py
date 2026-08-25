@@ -1,6 +1,3 @@
-test_choice = []
-
-
 def validate_text(text):
     clean_text = text.strip()
     if clean_text.isalpha() and len(clean_text) >= 2:

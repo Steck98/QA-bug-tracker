@@ -64,6 +64,17 @@ class Bug:
     def assigned_to(self, new_assigned_to):
         self.__assigned_to = new_assigned_to
 
+    def to_dict(self):
+        return {
+            "title": self.title,
+            "bug_id": self.bug_id,
+            "status": self.status,
+            "priority": self.priority,
+            "description": self.description,
+            "assigned_to": self.assigned_to,
+            "reported_by": self.reported_by,
+        }
+
     def __repr__(self):
         return (
             f"Title: {self.__title}\n"
