@@ -1,10 +1,17 @@
-def validate_text(text):
+def validate_text(text, special_text=False):
     clean_text = text.strip()
-    if clean_text.isalpha() and len(clean_text) >= 2:
-        return True
+    if not special_text:
+        if clean_text.isalpha() and len(clean_text) >= 2:
+            return True
+        else:
+            print("Input must consist of at least 2 letters")
+            return False
     else:
-        print("Input must consist of only letters and can't be empty")
-        return False
+        if 500 >= len(clean_text) >= 6:
+            return True
+        else:
+            print("Input must consist of at least 6 and a maximum of 500 characters")
+            return False
 
 
 def validate_number(number):

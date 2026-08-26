@@ -25,8 +25,8 @@ def get_user():
     print("===============================\n")
     return add_employee(
         User(
-            name=get_text("Name: "),
-            last_name=get_text("Last name: "),
+            name=get_text("Name: ", False),
+            last_name=get_text("Last name: ", False),
             employee_id=get_id("Employee ID: ", "USR-"),
             employed=get_status(),
             position=get_choice("Position: ", User.allowed_positions),
@@ -40,13 +40,13 @@ def bugs_inputs():
     print("===============================\n")
     return add_bug(
         Bug(
-            title=input("Pick a title: "),
+            title=get_text("Pick a title: ", True),
             bug_id=get_id("Bug ID: ", "BG-"),
             status=get_choice("What is the bug status? ", Bug.allowed_status),
             priority=get_choice("What is the bug priority? ", Bug.allowed_priorities),
-            description=input("What is the issue? "),
-            assigned_to=get_text("Who would you like to assign this bug to? "),
-            reported_by=get_text("What is your name? "),
+            description=get_text("What is the issue? ", True),
+            assigned_to=get_text("Who would you like to assign this bug to? ", False),
+            reported_by=get_text("What is your name? ", False),
         )
     )
 
@@ -81,10 +81,10 @@ def get_status():
             return validated_status
 
 
-def get_text(default_text):
+def get_text(default_text, special_text):
     while True:
         text = input(default_text)
-        validated_text = validators.validate_text(text)
+        validated_text = validators.validate_text(text, special_text)
         if validated_text:
             return text.capitalize()
 
