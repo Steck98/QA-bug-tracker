@@ -36,10 +36,7 @@ class User:
 
     @employed.setter
     def employed(self, employed_status):
-        if employed_status == "yes":
-            self.__employed = True
-        else:
-            self.__employed = False
+        self.__employed = employed_status
 
     @property
     def last_name(self):

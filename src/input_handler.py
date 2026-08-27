@@ -86,7 +86,7 @@ def get_text(default_text, special_text):
         text = input(default_text)
         validated_text = validators.validate_text(text, special_text)
         if validated_text:
-            return text.capitalize()
+            return text
 
 
 def get_choice(category, available_choices):
