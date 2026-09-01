@@ -7,7 +7,7 @@ class User:
         last_name="last_name",
         employee_id="0",
         employed=True,
-        position="Worker",
+        position="WORKER",
     ):
         self.__name = name
         self.__last_name = last_name
