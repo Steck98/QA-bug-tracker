@@ -2,9 +2,9 @@ import json
 import sys
 
 
-def load_data():
+def load_data(data_path="data/data.json"):
     try:
-        with open("data/data.json", encoding="utf-8") as file:
+        with open(data_path, encoding="utf-8") as file:
             data = json.load(file)
             return data
     except FileNotFoundError:
@@ -17,9 +17,9 @@ def load_data():
         sys.exit(1)
 
 
-def add_data(new_data):
+def add_data(new_data, data_path="data/data.json"):
     try:
-        with open("data/data.json", "r", encoding="utf-8") as file:
+        with open(data_path, "r", encoding="utf-8") as file:
             data = json.load(file)
 
     except FileNotFoundError:
@@ -36,7 +36,7 @@ def add_data(new_data):
     elif "title" in new_data:
         data["bugs"].append(new_data)
     try:
-        with open("data/data.json", "w", encoding="utf-8") as file:
+        with open(data_path, "w", encoding="utf-8") as file:
             json.dump(data, file, indent=4, ensure_ascii=False)
     except PermissionError:
         print("Permission denied: unable to write to data file.")

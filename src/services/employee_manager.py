@@ -1,4 +1,4 @@
-from services.data_manager import *
+from src.services.data_manager import add_data, load_data
 
 
 def add_employee(new_employee):

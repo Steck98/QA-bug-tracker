@@ -1,13 +1,6 @@
 {
     "users": [
         {
-            "name": "Anna",
-            "last_name": "Kowalska",
-            "employee_id": "sad",
-            "employed": true,
-            "position": "Developer"
-        },
-        {
             "name": "Raf",
             "last_name": "Raf",
             "employee_id": "USR-1234",
@@ -37,33 +30,6 @@
         }
     ],
     "bugs": [
-        {
-            "title": "title",
-            "bug_id": "id",
-            "status": "status",
-            "priority": "priority",
-            "description": "description",
-            "assigned_to": "assigned_user",
-            "reported_by": "reported_user"
-        },
-        {
-            "title": "Login button doesn't work",
-            "bug_id": "BUG-001",
-            "status": "open",
-            "priority": "high",
-            "description": "Login button does nothing after clicking",
-            "assigned_to": "Anna",
-            "reported_by": "Rafał"
-        },
-        {
-            "title": "Incorrect user data",
-            "bug_id": "BUG-002",
-            "status": "in progress",
-            "priority": "medium",
-            "description": "User information is displayed incorrectly",
-            "assigned_to": "Rafał",
-            "reported_by": "Anna"
-        },
         {
             "title": "Title",
             "bug_id": "BG-1234",
