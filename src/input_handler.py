@@ -1,8 +1,8 @@
-import validators
-from models.bug import Bug
-from models.user import User
-from services.bug_manager import add_bug
-from services.employee_manager import add_employee
+import src.validators
+from src.models.bug import Bug
+from src.models.user import User
+from src.services.bug_manager import add_bug
+from src.services.employee_manager import add_employee
 
 
 def run_bug_tracker():
@@ -68,7 +68,7 @@ def get_menu_choice():
 def get_id(category, prefix):
     while True:
         new_id = input(category)
-        validated_id = validators.validate_number(new_id)
+        validated_id = src.validators.validate_number(new_id)
         if validated_id:
             return f"{prefix}{new_id}"
 
@@ -76,7 +76,7 @@ def get_id(category, prefix):
 def get_status():
     while True:
         status = input("Is employed? yes/no").lower()
-        validated_status = validators.validate_status(status)
+        validated_status = src.validators.validate_status(status)
         if validated_status is not None:
             return validated_status
 
@@ -84,7 +84,7 @@ def get_status():
 def get_text(default_text, special_text):
     while True:
         text = input(default_text)
-        validated_text = validators.validate_text(text, special_text)
+        validated_text = src.validators.validate_text(text, special_text)
         if validated_text:
             return text
 
@@ -92,6 +92,6 @@ def get_text(default_text, special_text):
 def get_choice(category, available_choices):
     while True:
         choice = input(category).upper()
-        validated_choice = validators.validate_choice(choice, available_choices)
+        validated_choice = src.validators.validate_choice(choice, available_choices)
         if validated_choice:
             return choice
