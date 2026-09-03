@@ -40,3 +40,11 @@ def add_data(new_data, data_path="data/data.json"):
             json.dump(data, file, indent=4, ensure_ascii=False)
     except PermissionError:
         print("Permission denied: unable to write to data file.")
+
+
+def save_data(new_data, data_path="data/data.json"):
+    try:
+        with open(data_path, "w", encoding="utf-8") as file:
+            json.dump(new_data, file, indent=4, ensure_ascii=False)
+    except PermissionError:
+        print("Permission denied: unable to write to data file.")

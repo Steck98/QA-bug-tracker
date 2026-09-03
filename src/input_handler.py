@@ -1,7 +1,13 @@
 import src.validators
 from src.models.bug import Bug
 from src.models.user import User
-from src.services.bug_manager import add_bug
+from src.services.bug_manager import (
+    add_bug,
+    choose_bug,
+    delete_bug,
+    display_bug,
+    update_bug,
+)
 from src.services.employee_manager import add_employee
 
 
@@ -12,9 +18,54 @@ def run_bug_tracker():
     while True:
         menu_choice = get_menu_choice()
         if menu_choice == 1:
-            get_user()
+            sub_menu_choice = get_sub_menu_choice("user")
+            if sub_menu_choice == 1:
+                get_user()
         elif menu_choice == 2:
-            bugs_inputs()
+            sub_menu_choice = get_sub_menu_choice("bug")
+            if sub_menu_choice == 1:
+                get_bugs()
+            if sub_menu_choice == 2:
+                bugs_data_list = [
+                    "title",
+                    "status",
+                    "priority",
+                    "description",
+                    "assigned_to",
+                ]
+                bug = choose_bug("update")
+                while True:
+                    print("Title,Status,Priority,Description,Assigned_to")
+                    bug_field = input("Which field would you like to update").lower()
+                    if src.validators.validate_choice(bug_field, bugs_data_list):
+                        while True:
+                            if bug_field == "priority":
+                                print("Change Priority: LOW/MEDIUM/HIGH")
+                                new_value = input("What is the new priority? ").upper()
+                                if src.validators.validate_choice(
+                                    new_value, ["LOW", "MEDIUM", "HIGH"]
+                                ):
+                                    update_bug(bug, bug_field, new_value)
+                                    break
+                            elif bug_field == "status":
+                                print("Change Status: DONE/TODO/INPROGRESS")
+                                new_value = input("What is the new status? ").upper()
+                                if src.validators.validate_choice(
+                                    new_value, ["TODO", "INPROGRESS", "DONE"]
+                                ):
+                                    update_bug(bug, bug_field, new_value)
+                                    break
+                            else:
+                                new_value = get_text(
+                                    "What is the new value?", True
+                                ).lower()
+                                update_bug(bug, bug_field, new_value)
+                                break
+                    break
+            if sub_menu_choice == 3:
+                display_bug()
+            if sub_menu_choice == 4:
+                delete_bug()
         else:
             break
 
@@ -34,7 +85,7 @@ def get_user():
     )
 
 
-def bugs_inputs():
+def get_bugs():
     print("\n===============================")
     print("Submit bug report")
     print("===============================\n")
@@ -55,12 +106,31 @@ def get_menu_choice():
     while True:
         try:
             user_choice = int(
-                input("Would you like to:\n1.Add new user\n2.Report Bug\n3.Exit")
+                input("Would you like to:\n1.Manage Users\n2.Manage Bugs\n3.Exit")
             )
             if 1 <= user_choice <= 3:
                 return user_choice
             else:
                 print("You must pick between 1 and 3")
+        except ValueError:
+            print("Your choice must consist of only digists")
+
+
+def get_sub_menu_choice(category):
+    print("\n===============================")
+    print(f"Manage {category}")
+    print("===============================\n")
+    while True:
+        try:
+            user_choice = int(
+                input(
+                    f"Would you like to:\n1.Add {category}\n2.Update {category}\n3.Display {category}\n4.Delete {category}\n5.Return\n6.Exit"
+                )
+            )
+            if 1 <= user_choice <= 6:
+                return user_choice
+            else:
+                print("You must pick between 1 and 6")
         except ValueError:
             print("Your choice must consist of only digists")
 
