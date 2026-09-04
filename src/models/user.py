@@ -1,5 +1,5 @@
 class User:
-    allowed_positions = ["QA", "WORKER", "GALAXY DESTROYER"]  # noqa: RUF012
+    allowed_positions = ["QA", "JUNIORQA", "SENIORQA"]  # noqa: RUF012
 
     def __init__(
         self,
