@@ -8,7 +8,13 @@ from src.services.bug_manager import (
     display_bug,
     update_bug,
 )
-from src.services.employee_manager import add_employee
+from src.services.employee_manager import (
+    add_employee,
+    delete_user,
+    display_user,
+    update_user,
+    choose_user,
+)
 
 
 def run_bug_tracker():
@@ -21,6 +27,43 @@ def run_bug_tracker():
             sub_menu_choice = get_sub_menu_choice("user")
             if sub_menu_choice == 1:
                 get_user()
+            if sub_menu_choice == 2:
+                users_data_list = [
+                    "last_name",
+                    "position",
+                    "employed",
+                ]
+                user = choose_user("update")
+                while True:
+                    print("last_name,position,employed")
+                    user_field = input("Which field would you like to update").lower()
+                    if src.validators.validate_choice(user_field, users_data_list):
+                        while True:
+                            if user_field == "position":
+                                print("Change Position: JUNIORQA/QA/SENIORQA")
+                                new_value = input("What is the new position? ").upper()
+                                if src.validators.validate_choice(
+                                    new_value, ["JUNIORQA", "QA", "SENIORQA"]
+                                ):
+                                    update_user(user, user_field, new_value)
+                                    break
+                            elif user_field == "employed":
+                                print("Is employed?: yes/no")
+                                new_value = input("What is the new status? ").lower()
+                                if src.validators.validate_status(new_value):
+                                    update_user(user, user_field, new_value)
+                                    break
+                            else:
+                                new_value = get_text(
+                                    "What is the new value?", True
+                                ).lower()
+                                update_user(user, user_field, new_value)
+                                break
+                    break
+            if sub_menu_choice == 3:
+                display_user()
+            if sub_menu_choice == 4:
+                delete_user()
         elif menu_choice == 2:
             sub_menu_choice = get_sub_menu_choice("bug")
             if sub_menu_choice == 1:
