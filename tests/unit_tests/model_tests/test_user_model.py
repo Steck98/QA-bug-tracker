@@ -10,8 +10,8 @@ from src.models.user import User
 @pytest.mark.parametrize(
     "name, last_name, employee_id, employed, position",
     [
-        ("Rafał", "Stecz", "1312", True, "QA"),
-        ("Rafałaa", "Stecza", "13123", False, "WORKER"),
+        ("Rafał", "Stecz", "1312", True, "JUNIORQA"),
+        ("Rafałaa", "Stecza", "13123", False, "JUNIORQA"),
     ],
 )
 def test_user_class(name, last_name, employee_id, employed, position):
@@ -41,7 +41,7 @@ def user_fixture():
         last_name="Stecz",
         employee_id="1234",
         employed=True,
-        position="QA",
+        position="JUNIORQA",
     )
 
 
@@ -50,7 +50,7 @@ def test_get_user_id(user_fixture):
 
 
 def test_get_user_position(user_fixture):
-    assert user_fixture.position == "QA"
+    assert user_fixture.position == "JUNIORQA"
 
 
 def test_get_user_employed(user_fixture):
@@ -74,7 +74,7 @@ def test_set_user_last_name(user_fixture, user_last_name):
     assert user_fixture.last_name == user_last_name
 
 
-@pytest.mark.parametrize("user_position", ["QA", "WORKER"])
+@pytest.mark.parametrize("user_position", ["QA", "JUNIORQA"])
 def test_set_user_position(user_fixture, user_position):
     user_fixture.position = user_position
     assert user_fixture.position == user_position
@@ -98,7 +98,7 @@ def test_user_to_dict(user_fixture):
         "last_name": "Stecz",
         "employee_id": "1234",
         "employed": True,
-        "position": "QA",
+        "position": "JUNIORQA",
     }
 
 
