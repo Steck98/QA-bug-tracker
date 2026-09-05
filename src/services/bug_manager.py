@@ -23,8 +23,7 @@ def choose_bug(action):
             for bug in bugs_data:
                 if f"BG-{picked_bug}" == bug["bug_id"]:
                     return bug
-                else:
-                    print("Picked bug does not exist, pick one from the list")
+            print("Picked bug does not exist, pick one from the list")
 
 
 def display_bug():

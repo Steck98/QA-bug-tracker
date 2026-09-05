@@ -1,67 +1,23 @@
 {
-    "users": [
-        {
-            "name": "Testing",
-            "last_name": "User",
-            "employee_id": "USR-1212",
-            "employed": true,
-            "position": "SENIORQA"
-        }
-    ],
+    "users": [],
     "bugs": [
         {
-            "title": "this is the new title",
-            "bug_id": "BG-0011",
-            "status": "INPROGRESS",
-            "priority": "MEDIUM",
-            "description": "shakalaka testing bum bum ",
-            "assigned_to": "don pedro de compostela",
-            "reported_by": "Kasia"
-        },
-        {
-            "title": "this is the new updated title ",
-            "bug_id": "BG-0013",
-            "status": "INPROGRESS",
-            "priority": "HIGH",
-            "description": "Changes made to the user's profile disappear after refreshing the page.",
-            "assigned_to": "Anna",
-            "reported_by": "Daniel"
-        },
-        {
-            "title": "Search returns incorrect results",
-            "bug_id": "BG-0014",
-            "status": "DONE",
-            "priority": "MEDIUM",
-            "description": "The user search sometimes returns records that do not match the entered search phrase.",
-            "assigned_to": "Raf",
-            "reported_by": "Marek"
-        },
-        {
-            "title": "Empty registration form causes an error",
-            "bug_id": "BG-0015",
+            "title": "Ttt",
+            "bug_id": "BG-1234",
             "status": "TODO",
             "priority": "HIGH",
-            "description": "Submitting the registration form without entering any data causes an unexpected application error.",
-            "assigned_to": "Kasia",
-            "reported_by": "Anna"
+            "description": "ad",
+            "assigned_to": "Da",
+            "reported_by": "Da"
         },
         {
-            "title": "Incorrect status displayed after update",
-            "bug_id": "BG-0016",
-            "status": "INPROGRESS",
+            "title": "New Title",
+            "bug_id": "BG-1235",
+            "status": "TODO",
             "priority": "HIGH",
-            "description": "After changing the bug status, the old status is still displayed until the application is restarted.",
-            "assigned_to": "Daniel",
-            "reported_by": "Raf"
-        },
-        {
-            "title": "Default user avatar is not displayed",
-            "bug_id": "BG-0017",
-            "status": "DONE",
-            "priority": "LOW",
-            "description": "The default user avatar is not displayed when the user has not uploaded a custom profile picture.",
-            "assigned_to": "Marek",
-            "reported_by": "Kasia"
+            "description": "ad",
+            "assigned_to": "Da",
+            "reported_by": "Da"
         }
     ]
 }

@@ -145,7 +145,7 @@ Clone the repository and go to the project folder.
 Then run:
 
 ```bash
-python src.main.py
+python -m src.main
 ```
 
 The application starts with the main menu.
