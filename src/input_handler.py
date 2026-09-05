@@ -10,10 +10,10 @@ from src.services.bug_manager import (
 )
 from src.services.employee_manager import (
     add_employee,
+    choose_user,
     delete_user,
     display_user,
     update_user,
-    choose_user,
 )
 
 
